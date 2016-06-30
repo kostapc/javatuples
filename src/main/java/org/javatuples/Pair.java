@@ -44,8 +44,8 @@ public final class Pair<A,B>
 
     private static final int SIZE = 2;
 
-    private final A val0;
-    private final B val1;
+    private A val0;
+    private B val1;
     
     
     
