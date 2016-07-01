@@ -51,7 +51,7 @@ public final class LabelValue<A,B>
     
     
     public static <A,B> LabelValue<A,B> with(final A label, final B value) {
-        return new LabelValue<A,B>(label,value);
+        return new LabelValue<>(label, value);
     }
 
     
@@ -71,7 +71,7 @@ public final class LabelValue<A,B>
         if (array.length != 2) {
             throw new IllegalArgumentException("Array must have exactly 2 elements in order to create a LabelValue. Size is " + array.length);
         }
-        return new LabelValue<X,X>(array[0],array[1]);
+        return new LabelValue<>(array[0], array[1]);
     }
 
     
@@ -136,7 +136,7 @@ public final class LabelValue<A,B>
             throw new IllegalArgumentException("Iterable must have exactly 2 available elements in order to create a LabelValue.");
         }
         
-        return new LabelValue<X,X>(element0, element1);
+        return new LabelValue<>(element0, element1);
         
     }
     
@@ -170,12 +170,12 @@ public final class LabelValue<A,B>
     
     
     public <X> LabelValue<X,B> setLabel(final X label) {
-        return new LabelValue<X,B>(label, this.value);
+        return new LabelValue<>(label, this.value);
     }
     
     
     public <Y> LabelValue<A,Y> setValue(final Y value) {
-        return new LabelValue<A,Y>(this.label, value);
+        return new LabelValue<>(this.label, value);
     }
     
     

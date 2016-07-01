@@ -31,6 +31,6 @@ package org.javatuples.valueintf;
  */
 public interface IValueLabel<X> {
 
-    public X getLabel();
+    X getLabel();
     
 }

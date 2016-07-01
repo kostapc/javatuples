@@ -44,21 +44,6 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
     
     private final Object[] valueArray;
     private final List<Object> valueList;
-    
-    
-
-    /**
-     * 
-     * @deprecated Will be removed in 1.4. The "size" parameter is of no use at
-     *             this level, so use the simpler Tuple(values) constructor instead.
-     */
-    @Deprecated
-    protected Tuple(@SuppressWarnings("unused") final int size, final Object... values) {
-        super();
-        this.valueArray = values;
-        this.valueList = Arrays.asList(values);
-    }
-
 
     
     protected Tuple(final Object... values) {
@@ -189,7 +174,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
     
     
     public final List<Object> toList() {
-        return Collections.unmodifiableList(new ArrayList<Object>(this.valueList));
+        return Collections.unmodifiableList(new ArrayList<>(this.valueList));
     }
     
     
@@ -248,7 +233,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
             
         }
         
-        return (Integer.valueOf(tLen)).compareTo(Integer.valueOf(oLen));
+        return (Integer.valueOf(tLen)).compareTo(oLen);
         
     }
     

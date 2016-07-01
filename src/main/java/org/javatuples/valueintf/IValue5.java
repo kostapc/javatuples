@@ -31,6 +31,6 @@ package org.javatuples.valueintf;
  */
 public interface IValue5<X> {
 
-    public X getValue5();
+    X getValue5();
     
 }

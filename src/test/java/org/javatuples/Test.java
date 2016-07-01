@@ -37,9 +37,9 @@ public class Test extends TestCase {
         
         
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade =
-            Decade.with(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9), Integer.valueOf(10));
+            Decade.with(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        List<Integer> decadeList = new ArrayList<Integer>();
+        List<Integer> decadeList = new ArrayList<>();
         
         for (final Object value : decade) {
             decadeList.add((Integer)value);
@@ -61,7 +61,7 @@ public class Test extends TestCase {
         
         assertEquals(decade, decade4);
         
-        decadeList.add(Integer.valueOf(100));
+        decadeList.add(100);
         
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade5 = 
             Decade.fromIterable(decadeList, 0);
@@ -70,7 +70,7 @@ public class Test extends TestCase {
 
         
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade100 =
-            Decade.with(Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9), Integer.valueOf(10), Integer.valueOf(100));
+            Decade.with(2, 3, 4, 5, 6, 7, 8, 9, 10, 100);
         
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade6 = 
             Decade.fromIterable(decadeList, 1);
@@ -79,13 +79,13 @@ public class Test extends TestCase {
 
         
         final Ennead<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> ennead =
-            Ennead.with(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9));
+            Ennead.with(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
         System.out.println(ennead.addAt1("Pepito"));
         System.out.println(ennead.add(new Socket()));
      
         final Sextet<String,Integer,String,String,String,String> sextet =
-            Sextet.with("1.0",Integer.valueOf(2),"3.0","4.0","5.0","6.0");
+            Sextet.with("1.0", 2,"3.0","4.0","5.0","6.0");
         
         System.out.println(sextet);
         System.out.println(sextet.addAt3("Perico"));
@@ -116,13 +116,13 @@ public class Test extends TestCase {
         System.out.println(triplet);
 
         
-        Pair<String,Integer> pair1 = Pair.with("hello", Integer.valueOf(23));
+        Pair<String,Integer> pair1 = Pair.with("hello", 23);
         Quintet<String,Integer,Double,String,String> quintet = 
-            Quintet.with("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+            Quintet.with("a", 3, 34.2, "b", "c");
 
-        Pair<String,Integer> pair2 = new Pair<String,Integer>("hello", Integer.valueOf(23));
-        Quintet<String,Integer,Double,String,String> quintet2 = 
-            new Quintet<String,Integer,Double,String,String>("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+        Pair<String,Integer> pair2 = new Pair<>("hello", 23);
+        Quintet<String,Integer,Double,String,String> quintet2 =
+                new Quintet<>("a", 3, 34.2, "b", "c");
 
         System.out.println(pair1);
         System.out.println(pair2);
@@ -140,7 +140,7 @@ public class Test extends TestCase {
         
         
         
-        final List<Tuple> tuples = new ArrayList<Tuple>();
+        final List<Tuple> tuples = new ArrayList<>();
         tuples.add(Quintet.with(0, 87, 21, 2, 2));
         tuples.add(Quintet.with(0, 1, 1, 4, 1));
         tuples.add(Quintet.with(0, 1, 1, 4, 0));
